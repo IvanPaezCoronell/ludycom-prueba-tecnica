@@ -1,1 +1,33 @@
-<p>Falta por desarrollar (es casi igual a la logica usuarios)</p>
+<div class='link'>
+
+  <a routerLink="/create-area">Crear Area</a>
+</div>
+<div class='container'>
+  <table>
+    <thead>
+      <tr>
+        <th>Codigo</th>
+        <th>Name</th>
+        <th>Lider</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+
+      <tr class="table-rows" *ngFor="let area of Areas">
+        <td class="table-datas">{{ area.codigo }}</td>
+        <td class="table-datas">{{ area.name }}</td>
+        <td class="table-datas">{{ area.lider }}</td>
+        <td class="table-datas">{{ area.state }}</td>
+
+        <td class="table-datas">
+          <button routerLink="/edit-area/{{ area.id }}">edit</button>
+          <button (click)="deleteArea(area)">delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

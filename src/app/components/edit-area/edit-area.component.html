@@ -1,0 +1,33 @@
+<form [formGroup]="editForm" (ngSubmit)='onSubmit()' novalidate>
+
+  <div>
+    <label for="">Codigo:</label>
+    <input type="text" formControlName='codigo' required>
+  </div>
+
+
+  <div>
+    <label for="">Nombre</label>
+    <input type="text" formControlName='name' required>
+  </div>
+
+  <div>
+    <label for="">Lider</label>
+    <input type="text" formControlName='lider' required>
+  </div>
+
+
+
+
+  <div>
+    <label for="">Estado:</label>
+    <select name="select" id="" formControlName='state' required>
+      <option value="activo">Activo</option>
+      <option value="inactivo">Inactivo</option>
+    </select>
+  </div>
+
+  <button [disabled]="!editForm.valid">Guardar</button>
+
+
+</form>

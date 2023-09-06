@@ -19,6 +19,8 @@ import { CreateUserComponent } from './components/create-user/create-user.compon
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateAreaComponent } from './components/create-area/create-area.component';
+import { EditAreaComponent } from './components/edit-area/edit-area.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: 'create-user', component: CreateUserComponent },
   { path: 'edit-user/:id', component: EditUserComponent },
   { path: 'areas', component: AreasComponent },
+  { path: 'create-area', component: CreateAreaComponent },
+  { path: 'edit-area/:id', component: EditAreaComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
@@ -40,6 +44,8 @@ const routes: Routes = [
     PageNotFoundComponent,
     CreateUserComponent,
     EditUserComponent,
+    CreateAreaComponent,
+    EditAreaComponent,
   ],
   imports: [
     BrowserModule,

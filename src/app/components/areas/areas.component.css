@@ -2,3 +2,47 @@ p {
 	margin-top: 10rem;
 	text-align: center;
 }
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+a {
+	text-decoration: none;
+	padding: 10px;
+	background-color: #1976d2;
+	color: white;
+	border-radius: 2px;
+}
+
+.link {
+	margin: 10rem 0 2rem 3.7rem;
+}
+
+table {
+	border: 1px solid rgb(191, 188, 188);
+	border-collapse: collapse;
+}
+
+th {
+	background-color: rgb(191, 188, 188);
+	text-align: center;
+	align-items: center;
+	border: 1px solid;
+	padding: 5px;
+	font-size: 15px;
+}
+
+tbody {
+	border: 1px solid rgb(191, 188, 188);
+}
+
+td {
+	border: 1px solid rgb(191, 188, 188);
+	padding: 1px;
+	text-align: center;
+}
