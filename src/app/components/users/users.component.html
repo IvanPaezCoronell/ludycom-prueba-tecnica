@@ -1,0 +1,39 @@
+<div class='link'>
+
+  <a routerLink="/create-user">Crear Usuario</a>
+</div>
+<div class='container'>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fech Nto.</th>
+        <th>Email</th>
+        <th>Doc.</th>
+        <th>Salario</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+
+      <tr class="table-rows" *ngFor="let user of Users">
+        <td class="table-datas">{{ user.name }}</td>
+        <td class="table-datas">{{ user.lastname }}</td>
+        <td class="table-datas">{{ user.age }}</td>
+        <td class="table-datas">{{ user.email }}</td>
+        <td class="table-datas">{{ user.cc }}</td>
+        <td class="table-datas">{{ user.salary }}</td>
+        <td class="table-datas">{{ user.state }}</td>
+
+        <td class="table-datas">
+          <button routerLink="/edit-user/{{ user.id }}">edit</button>
+          <button (click)="deleteUser(user)">delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
